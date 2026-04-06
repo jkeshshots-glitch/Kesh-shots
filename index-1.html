@@ -1,0 +1,1950 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kesh Shots — Graphic Designer & Photographer | Busia, Uganda</title>
+
+<!-- SEO Meta Tags -->
+<meta name="description" content="Kesh Shots — Professional graphic designer and photographer based in Busia, Uganda. Specializing in flyer design, branding, logo design, birthday flyers, business graphics, and event photography. Contact: 0786674508."/>
+<meta name="keywords" content="Kesh Shots, Kesh Khash, Kerera Trevor, graphic designer Uganda, graphic designer Busia, photographer Busia Uganda, flyer design Uganda, logo design Uganda, birthday flyer Uganda, branding Uganda, marketing flyers Uganda, KeshShots"/>
+<meta name="author" content="Kerera Trevor — Kesh Shots"/>
+<meta name="robots" content="index, follow"/>
+<meta name="geo.region" content="UG"/>
+<meta name="geo.placename" content="Busia, Uganda"/>
+
+<!-- Open Graph -->
+<meta property="og:title" content="Kesh Shots — Graphic Designer & Photographer | Busia, Uganda"/>
+<meta property="og:description" content="Professional graphic designer specializing in flyers, branding, logos and photography. Based in Busia, Uganda."/>
+<meta property="og:type" content="website"/>
+<meta property="og:locale" content="en_UG"/>
+
+<!-- Schema.org structured data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Kesh Shots",
+  "description": "Professional graphic design and photography services in Busia, Uganda",
+  "founder": {"@type": "Person", "name": "Kerera Trevor", "alternateName": "Kesh Khash"},
+  "address": {"@type": "PostalAddress", "addressLocality": "Busia", "addressCountry": "UG"},
+  "telephone": "+256786674508",
+  "email": "jkeshshots@gmail.com",
+  "url": "https://keshshots.com",
+  "sameAs": ["https://instagram.com/KeshShots"],
+  "serviceType": ["Graphic Design", "Photography", "Logo Design", "Flyer Design", "Branding"]
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=DM+Sans:wght@300;400;500;600&family=Unbounded:wght@400;700;900&display=swap" rel="stylesheet"/>
+
+<style>
+  :root {
+    --forest: #0d3b1e;
+    --forest-dark: #071f10;
+    --forest-mid: #134d27;
+    --cream: #f5efc7;
+    --cream-light: #fdf8e8;
+    --cream-dim: #c8bf94;
+    --gold: #c9a84c;
+    --white: #ffffff;
+    --text-light: rgba(245,239,199,0.75);
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--forest-dark);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+    cursor: none;
+  }
+
+  /* CURSOR */
+  .cursor {
+    position: fixed;
+    width: 10px; height: 10px;
+    background: var(--cream);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.15s ease, background 0.2s;
+    mix-blend-mode: difference;
+  }
+  .cursor-ring {
+    position: fixed;
+    width: 32px; height: 32px;
+    border: 1.5px solid var(--cream);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transition: all 0.18s ease;
+    opacity: 0.5;
+    mix-blend-mode: difference;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 48px;
+    background: linear-gradient(to bottom, rgba(7,31,16,0.97) 0%, transparent 100%);
+    backdrop-filter: blur(4px);
+    transition: padding 0.3s;
+  }
+  nav.scrolled { padding: 14px 48px; background: rgba(7,31,16,0.98); }
+
+  .logo {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px;
+    font-weight: 900;
+    letter-spacing: 1px;
+    color: var(--cream);
+    text-decoration: none;
+  }
+  .logo em {
+    font-style: normal;
+    color: var(--gold);
+  }
+
+  .nav-links {
+    display: flex; gap: 32px; list-style: none;
+  }
+  .nav-links a {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0;
+    width: 0; height: 2px;
+    background: var(--gold);
+    transition: width 0.3s;
+    border-radius: 2px;
+  }
+  .nav-links a:hover { color: var(--cream); }
+  .nav-links a:hover::after { width: 100%; }
+
+  .nav-cta {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--forest-dark);
+    background: var(--cream);
+    padding: 11px 26px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s;
+  }
+  .nav-cta:hover { background: var(--gold); transform: translateY(-1px); }
+
+  /* HAMBURGER */
+  .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; }
+  .hamburger span { display: block; width: 24px; height: 2px; background: var(--cream); transition: all 0.3s; }
+
+  /* MOBILE MENU */
+  .mobile-menu {
+    display: none;
+    position: fixed; inset: 0;
+    background: var(--forest-dark);
+    z-index: 999;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--cream);
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.3s;
+  }
+  .mobile-menu a:hover { color: var(--gold); }
+  .mobile-close {
+    position: absolute; top: 24px; right: 24px;
+    font-size: 32px; color: var(--cream); cursor: pointer;
+  }
+
+  /* HERO */
+  #home {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse at 70% 30%, rgba(201,168,76,0.07) 0%, transparent 60%),
+      radial-gradient(ellipse at 20% 80%, rgba(13,59,30,0.8) 0%, transparent 50%),
+      var(--forest-dark);
+  }
+
+  .hero-stripes {
+    position: absolute; inset: -100%;
+    background: repeating-linear-gradient(
+      45deg,
+      transparent,
+      transparent 80px,
+      rgba(245,239,199,0.015) 80px,
+      rgba(245,239,199,0.015) 82px
+    );
+    animation: stripeSlide 30s linear infinite;
+  }
+  @keyframes stripeSlide {
+    0% { transform: translateX(0) translateY(0); }
+    100% { transform: translateX(200px) translateY(-200px); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 0 24px;
+    max-width: 900px;
+  }
+
+  .hero-eyebrow {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 28px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.2s forwards;
+    display: flex; align-items: center; justify-content: center; gap: 12px;
+  }
+  .hero-eyebrow::before, .hero-eyebrow::after {
+    content: ''; display: block; width: 30px; height: 1px; background: var(--gold);
+  }
+
+  .hero-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    font-size: clamp(64px, 13vw, 148px);
+    line-height: 0.92;
+    letter-spacing: -2px;
+    color: var(--cream);
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.45s forwards;
+  }
+  .hero-title .accent { color: var(--gold); font-style: italic; }
+
+  .hero-sub {
+    font-family: 'DM Sans', sans-serif;
+    font-size: clamp(15px, 2vw, 19px);
+    font-weight: 300;
+    color: var(--text-light);
+    margin-top: 28px;
+    line-height: 1.7;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.65s forwards;
+  }
+
+  .hero-btns {
+    display: flex; gap: 16px; justify-content: center; margin-top: 48px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 0.85s forwards;
+    flex-wrap: wrap;
+  }
+
+  .btn-solid {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--forest-dark);
+    background: var(--cream);
+    padding: 15px 38px;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: all 0.3s;
+    border: 2px solid var(--cream);
+  }
+  .btn-solid:hover { background: var(--gold); border-color: var(--gold); }
+
+  .btn-ghost {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase;
+    color: var(--cream);
+    background: transparent;
+    padding: 15px 38px;
+    text-decoration: none;
+    border-radius: 2px;
+    border: 2px solid rgba(245,239,199,0.4);
+    transition: all 0.3s;
+  }
+  .btn-ghost:hover { border-color: var(--cream); background: rgba(245,239,199,0.05); }
+
+  .hero-scroll {
+    position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 8px;
+    opacity: 0;
+    animation: fadeUp 0.9s ease 1.2s forwards;
+  }
+  .hero-scroll span {
+    font-size: 9px; letter-spacing: 3px; color: var(--text-light); text-transform: uppercase;
+  }
+  .scroll-bar {
+    width: 1px; height: 50px;
+    background: linear-gradient(to bottom, var(--gold), transparent);
+    animation: pulse 2s ease infinite;
+  }
+  @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+
+  /* STATS */
+  .stats-strip {
+    background: var(--forest);
+    border-top: 1px solid rgba(245,239,199,0.1);
+    border-bottom: 1px solid rgba(245,239,199,0.1);
+    padding: 36px 48px;
+    display: flex; justify-content: center; gap: 80px; flex-wrap: wrap;
+  }
+  .stat { text-align: center; }
+  .stat-n {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 42px; font-weight: 900;
+    color: var(--gold); line-height: 1;
+  }
+  .stat-l {
+    font-size: 11px; letter-spacing: 2px; color: var(--text-light);
+    text-transform: uppercase; margin-top: 6px;
+  }
+
+  /* SECTIONS */
+  section { padding: 100px 48px; }
+  .inner { max-width: 1200px; margin: 0 auto; }
+
+  .sec-label {
+    font-size: 10px; font-weight: 600; letter-spacing: 5px;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 16px;
+    display: flex; align-items: center; gap: 14px;
+  }
+  .sec-label::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+
+  .sec-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(40px, 7vw, 80px);
+    font-weight: 900;
+    line-height: 1;
+    color: var(--cream);
+    margin-bottom: 20px;
+  }
+  .sec-title em { color: var(--gold); font-style: italic; }
+
+  /* ABOUT */
+  #about { background: var(--forest-dark); }
+
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 64px;
+  }
+
+  .about-photo-wrap { position: relative; }
+  .about-photo-frame {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+  .about-photo-frame img {
+    width: 100%; height: 520px; object-fit: cover; object-position: top;
+    display: block;
+    filter: grayscale(10%);
+    border-radius: 4px;
+  }
+  .about-photo-frame::before {
+    content: '';
+    position: absolute; top: -12px; left: -12px;
+    right: 12px; bottom: 12px;
+    border: 2px solid var(--gold);
+    border-radius: 4px;
+    z-index: -1;
+  }
+  .about-photo-frame::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(to bottom, transparent 60%, rgba(7,31,16,0.6));
+    border-radius: 4px;
+  }
+
+  .about-badge {
+    position: absolute; bottom: 20px; right: -20px;
+    background: var(--cream); color: var(--forest-dark);
+    padding: 20px 24px;
+    text-align: center;
+    z-index: 2;
+    border-radius: 4px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .about-badge .big {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 32px; font-weight: 900; line-height: 1;
+    color: var(--forest);
+  }
+  .about-badge .sm {
+    font-size: 10px; font-weight: 600; letter-spacing: 1px;
+    color: var(--forest-mid); text-transform: uppercase; margin-top: 4px;
+  }
+
+  .about-text p {
+    font-size: 17px; line-height: 1.85; color: var(--text-light); margin-bottom: 18px;
+  }
+  .about-text p strong { color: var(--cream); font-weight: 600; }
+
+  .about-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700;
+    color: var(--cream); margin-bottom: 4px; margin-top: 28px;
+  }
+  .about-alias {
+    font-size: 14px; color: var(--gold); font-style: italic; margin-bottom: 28px;
+  }
+
+  .skills-row {
+    display: flex; flex-wrap: wrap; gap: 8px; margin-top: 28px;
+  }
+  .stag {
+    font-size: 11px; font-weight: 600; letter-spacing: 1px;
+    color: var(--forest-dark); background: var(--cream);
+    padding: 7px 16px; border-radius: 2px; text-transform: uppercase;
+  }
+  .stag.outline {
+    background: transparent; color: var(--cream);
+    border: 1.5px solid rgba(245,239,199,0.3);
+  }
+
+  /* SERVICES */
+  #services { background: var(--forest); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    margin-top: 64px;
+    background: rgba(245,239,199,0.08);
+    border: 1px solid rgba(245,239,199,0.08);
+  }
+
+  .svc {
+    background: var(--forest-dark);
+    padding: 44px 32px;
+    position: relative; overflow: hidden;
+    transition: background 0.35s;
+    cursor: default;
+  }
+  .svc:hover { background: var(--forest-mid); }
+  .svc::after {
+    content: '';
+    position: absolute; bottom: 0; left: 0;
+    height: 2px; width: 0;
+    background: var(--gold);
+    transition: width 0.4s;
+  }
+  .svc:hover::after { width: 100%; }
+
+  .svc-n {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 56px; font-weight: 900;
+    color: rgba(245,239,199,0.05); line-height: 1;
+    margin-bottom: 12px;
+  }
+  .svc-icon { font-size: 32px; margin-bottom: 14px; }
+  .svc-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700; color: var(--cream);
+    margin-bottom: 10px;
+  }
+  .svc-desc { font-size: 14px; line-height: 1.8; color: var(--text-light); }
+
+  /* PORTFOLIO */
+  #portfolio { background: var(--forest); }
+
+  .port-tabs {
+    display: flex; gap: 4px; margin-top: 48px; flex-wrap: wrap;
+  }
+  .tab {
+    font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; color: var(--text-light);
+    padding: 10px 20px; background: rgba(245,239,199,0.06);
+    border: 1px solid rgba(245,239,199,0.1);
+    cursor: pointer; transition: all 0.3s; border-radius: 2px;
+  }
+  .tab:hover, .tab.active {
+    background: var(--cream); color: var(--forest-dark);
+  }
+
+  .port-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 4px;
+    margin-top: 24px;
+  }
+  .port-item {
+    position: relative; overflow: hidden;
+    aspect-ratio: 4/3;
+    cursor: pointer;
+  }
+  .port-item img {
+    width: 100%; height: 100%; object-fit: cover;
+    transition: transform 0.6s ease;
+    background: var(--forest-mid);
+    min-height: 200px;
+  }
+  .port-item:hover img { transform: scale(1.06); }
+  .port-overlay {
+    position: absolute; inset: 0;
+    background: linear-gradient(to top, rgba(7,31,16,0.95) 0%, transparent 60%);
+    display: flex; flex-direction: column; justify-content: flex-end;
+    padding: 24px;
+    opacity: 0; transition: opacity 0.3s;
+  }
+  .port-item:hover .port-overlay { opacity: 1; }
+  .port-cat {
+    font-size: 9px; font-weight: 700; letter-spacing: 3px;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 4px;
+  }
+  .port-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; font-weight: 700; color: var(--cream);
+  }
+
+  /* PRICING */
+  #pricing { background: var(--forest-dark); }
+
+  .pricing-set { display: none; }
+  .pricing-set.active { display: block; }
+
+  .pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 2px;
+    margin-top: 24px;
+    background: rgba(245,239,199,0.06);
+    border: 1px solid rgba(245,239,199,0.06);
+  }
+
+  .p-card {
+    background: var(--forest-dark);
+    padding: 36px 28px;
+    position: relative; transition: background 0.3s;
+  }
+  .p-card:hover { background: rgba(13,59,30,0.8); }
+  .p-card.featured { background: var(--cream); }
+  .p-card.featured .p-type,
+  .p-card.featured .p-name,
+  .p-card.featured .p-amt,
+  .p-card.featured .p-sub { color: var(--forest-dark); }
+  .p-card.featured .p-feat li { color: var(--forest-mid); }
+  .p-card.featured .p-feat li::before { color: var(--gold); }
+  .p-card.featured .p-btn { background: var(--forest); color: var(--cream); }
+  .p-card.featured .p-btn:hover { background: var(--forest-mid); }
+
+  .p-badge {
+    position: absolute; top: 0; right: 0;
+    background: var(--gold); color: var(--forest-dark);
+    font-size: 9px; font-weight: 700; letter-spacing: 1px;
+    padding: 5px 12px; text-transform: uppercase;
+  }
+
+  .p-type {
+    font-size: 10px; font-weight: 600; letter-spacing: 3px;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 10px;
+  }
+  .p-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; font-weight: 700; color: var(--cream);
+    margin-bottom: 16px;
+  }
+  .p-amt {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 28px; font-weight: 900; color: var(--cream);
+    line-height: 1; margin-bottom: 4px;
+  }
+  .p-sub {
+    font-size: 11px; color: var(--text-light); margin-bottom: 24px;
+  }
+  .p-divider { height: 1px; background: rgba(245,239,199,0.12); margin-bottom: 20px; }
+  .p-feat { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-bottom: 28px; }
+  .p-feat li { font-size: 13px; color: var(--text-light); display: flex; align-items: flex-start; gap: 8px; line-height: 1.4; }
+  .p-feat li::before { content: '✓'; color: var(--gold); font-weight: 700; flex-shrink: 0; }
+
+  .p-btn {
+    display: block;
+    font-size: 11px; font-weight: 600; letter-spacing: 2px;
+    text-transform: uppercase; text-align: center; text-decoration: none;
+    color: var(--forest-dark); background: var(--cream);
+    padding: 13px; border-radius: 2px; transition: all 0.3s;
+    border: none; cursor: pointer; width: 100%;
+  }
+  .p-btn:hover { background: var(--gold); }
+
+  .logo-pkg-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 16px; margin-top: 24px;
+  }
+  .logo-pkg {
+    background: var(--forest-dark);
+    border: 1px solid rgba(245,239,199,0.1);
+    border-radius: 4px;
+    padding: 28px 24px;
+    position: relative;
+    transition: border-color 0.3s, transform 0.3s;
+  }
+  .logo-pkg:hover { border-color: rgba(201,168,76,0.4); transform: translateY(-2px); }
+  .lpkg-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px; font-weight: 700; color: var(--cream); margin-bottom: 6px;
+  }
+  .lpkg-price {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 24px; font-weight: 900; color: var(--gold);
+    margin-bottom: 4px;
+  }
+  .lpkg-delivery {
+    font-size: 11px; color: var(--text-light); margin-bottom: 16px;
+  }
+  .lpkg-includes {
+    font-size: 10px; font-weight: 700; letter-spacing: 2px;
+    color: var(--gold); text-transform: uppercase; margin-bottom: 10px;
+  }
+  .lpkg-list { list-style: none; display: flex; flex-direction: column; gap: 6px; }
+  .lpkg-list li { font-size: 13px; color: var(--text-light); padding-left: 16px; position: relative; line-height: 1.4; }
+  .lpkg-list li::before { content: '·'; position: absolute; left: 0; color: var(--gold); font-size: 18px; top: -2px; }
+  .lpkg-discount {
+    margin-top: 16px; font-size: 11px; color: var(--gold);
+    background: rgba(201,168,76,0.1); padding: 8px 12px; border-radius: 2px;
+    border-left: 2px solid var(--gold);
+  }
+
+  /* CONTACT */
+  #contact { background: var(--forest-dark); }
+
+  .contact-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    margin-top: 64px;
+    align-items: start;
+  }
+
+  .contact-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px; font-weight: 700; color: var(--cream); margin-bottom: 8px;
+  }
+  .contact-quote {
+    font-size: 15px; font-style: italic; color: var(--text-light);
+    line-height: 1.7; margin-bottom: 36px;
+  }
+
+  .c-card {
+    display: flex; align-items: flex-start; gap: 16px;
+    padding: 20px 0; border-bottom: 1px solid rgba(245,239,199,0.08);
+    text-decoration: none; transition: opacity 0.3s;
+  }
+  .c-card:hover { opacity: 0.8; }
+  .c-icon { font-size: 24px; flex-shrink: 0; margin-top: 2px; }
+  .c-lbl { font-size: 9px; font-weight: 700; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; }
+  .c-val { font-size: 15px; color: var(--cream); margin-top: 2px; }
+  .c-sub { font-size: 12px; color: var(--text-light); margin-top: 2px; }
+
+  /* Form */
+  .contact-form { display: flex; flex-direction: column; gap: 16px; }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  .fg { display: flex; flex-direction: column; gap: 6px; }
+  .fg label {
+    font-size: 9px; font-weight: 700; letter-spacing: 3px;
+    color: var(--gold); text-transform: uppercase;
+  }
+  .fg input, .fg select, .fg textarea {
+    background: var(--forest);
+    border: 1px solid rgba(245,239,199,0.15);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    padding: 13px 16px;
+    outline: none;
+    border-radius: 2px;
+    transition: border-color 0.3s;
+    width: 100%;
+  }
+  .fg input:focus, .fg select:focus, .fg textarea:focus {
+    border-color: var(--gold);
+  }
+  .fg select option { background: var(--forest-dark); }
+  .fg textarea { resize: vertical; min-height: 120px; }
+
+  .form-submit {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; color: var(--forest-dark);
+    background: var(--cream); border: none;
+    padding: 16px; border-radius: 2px; cursor: pointer;
+    width: 100%; transition: all 0.3s; margin-top: 4px;
+  }
+  .form-submit:hover { background: var(--gold); }
+  .form-submit:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  /* SUCCESS MESSAGE */
+  .form-success {
+    display: none;
+    background: rgba(13,59,30,0.8);
+    border: 1px solid var(--gold);
+    border-radius: 4px;
+    padding: 24px;
+    text-align: center;
+    margin-top: 16px;
+  }
+  .form-success.show { display: block; }
+  .form-success h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px; color: var(--gold); margin-bottom: 8px;
+  }
+  .form-success p { color: var(--text-light); font-size: 14px; line-height: 1.7; }
+
+  /* FOOTER */
+  footer {
+    background: var(--forest);
+    border-top: 1px solid rgba(245,239,199,0.08);
+    padding: 48px;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;
+  }
+  .footer-brand {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px; font-weight: 900; color: var(--cream);
+  }
+  .footer-brand em { font-style: normal; color: var(--gold); }
+  .footer-tagline {
+    font-size: 11px; color: var(--text-light); font-style: italic; margin-top: 4px;
+  }
+  .footer-copy { font-size: 11px; color: var(--text-light); letter-spacing: 1px; }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a {
+    font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+    color: var(--text-light); text-decoration: none; transition: color 0.3s;
+  }
+  .footer-links a:hover { color: var(--cream); }
+
+  /* REVEAL */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal { opacity: 0; transform: translateY(32px); transition: opacity 0.8s ease, transform 0.8s ease; }
+  .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* MOBILE */
+  @media (max-width: 900px) {
+    nav { padding: 18px 24px; }
+    nav.scrolled { padding: 14px 24px; }
+    .nav-links, .nav-cta { display: none; }
+    .hamburger { display: flex; }
+    section { padding: 72px 24px; }
+    .about-grid { grid-template-columns: 1fr; gap: 48px; }
+    .about-photo-frame img { height: 360px; }
+    .about-badge { right: 0; }
+    .services-grid { grid-template-columns: 1fr; }
+    .contact-layout { grid-template-columns: 1fr; }
+    .form-row { grid-template-columns: 1fr; }
+    footer { flex-direction: column; gap: 16px; padding: 36px 24px; }
+    .stats-strip { gap: 32px; padding: 32px 24px; }
+    .hero-title { letter-spacing: -1px; }
+    .logo-pkg-grid { grid-template-columns: 1fr; }
+  }
+
+  /* Lightbox */
+  .lb {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.9); z-index: 2000;
+    align-items: center; justify-content: center;
+  }
+  .lb.open { display: flex; }
+  .lb img { max-width: 90vw; max-height: 90vh; object-fit: contain; border-radius: 4px; }
+  .lb-close {
+    position: absolute; top: 20px; right: 28px;
+    font-size: 36px; color: var(--cream); cursor: pointer; line-height: 1;
+  }
+
+  /* ===== ADMIN PANEL ===== */
+  #adminOverlay {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.85); z-index: 5000;
+    align-items: center; justify-content: center;
+    padding: 20px;
+  }
+  #adminOverlay.open { display: flex; }
+
+  #adminPanel {
+    background: var(--forest-dark);
+    border: 1px solid var(--gold);
+    border-radius: 8px;
+    width: 100%; max-width: 800px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+    position: relative;
+  }
+
+  .admin-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 32px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(245,239,199,0.15);
+  }
+  .admin-header h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 20px; color: var(--gold);
+    letter-spacing: 1px;
+  }
+  .admin-close {
+    font-size: 28px; color: var(--cream); cursor: pointer; line-height: 1;
+    background: none; border: none;
+  }
+
+  .admin-section {
+    margin-bottom: 32px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(245,239,199,0.08);
+  }
+  .admin-section h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 3px;
+    color: var(--gold); text-transform: uppercase;
+    margin-bottom: 20px;
+  }
+
+  .admin-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .admin-grid { grid-template-columns: 1fr; } }
+
+  .admin-field { display: flex; flex-direction: column; gap: 6px; }
+  .admin-field label {
+    font-size: 9px; font-weight: 700; letter-spacing: 2px;
+    color: var(--cream-dim); text-transform: uppercase;
+  }
+  .admin-field input, .admin-field textarea {
+    background: var(--forest);
+    border: 1px solid rgba(245,239,199,0.15);
+    color: var(--cream);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 14px;
+    padding: 10px 14px;
+    border-radius: 2px;
+    outline: none;
+    transition: border-color 0.3s;
+  }
+  .admin-field input:focus, .admin-field textarea:focus { border-color: var(--gold); }
+  .admin-field textarea { min-height: 80px; resize: vertical; }
+
+  .admin-save-btn {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 11px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase;
+    background: var(--gold); color: var(--forest-dark);
+    border: none; padding: 14px 32px;
+    border-radius: 2px; cursor: pointer;
+    transition: all 0.3s; margin-top: 8px;
+  }
+  .admin-save-btn:hover { background: var(--cream); }
+
+  .admin-saved-toast {
+    display: none; background: rgba(201,168,76,0.15);
+    border: 1px solid var(--gold); border-radius: 4px;
+    padding: 12px 20px; margin-top: 16px;
+    font-size: 13px; color: var(--gold); text-align: center;
+  }
+  .admin-saved-toast.show { display: block; }
+
+  /* Login */
+  #adminLogin {
+    display: flex; flex-direction: column; gap: 16px;
+    max-width: 360px; margin: 0 auto; padding: 48px 0;
+    text-align: center;
+  }
+  #adminLogin h2 {
+    font-family: 'Unbounded', sans-serif;
+    font-size: 18px; color: var(--gold); margin-bottom: 8px;
+  }
+  #adminLogin p { font-size: 13px; color: var(--text-light); margin-bottom: 16px; }
+  #adminLoginInput {
+    background: var(--forest);
+    border: 1px solid rgba(245,239,199,0.2);
+    color: var(--cream); font-size: 16px;
+    padding: 14px 16px; border-radius: 2px;
+    outline: none; text-align: center;
+    letter-spacing: 3px;
+    transition: border-color 0.3s;
+  }
+  #adminLoginInput:focus { border-color: var(--gold); }
+  #adminLoginBtn {
+    background: var(--cream); color: var(--forest-dark);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; border: none;
+    padding: 14px; border-radius: 2px; cursor: pointer;
+    transition: all 0.3s;
+  }
+  #adminLoginBtn:hover { background: var(--gold); }
+  .login-error {
+    font-size: 12px; color: #ff6b6b; display: none;
+  }
+  .login-error.show { display: block; }
+
+  /* Admin trigger (hidden link in footer) */
+  .admin-trigger {
+    font-size: 9px; color: rgba(245,239,199,0.2);
+    text-decoration: none; letter-spacing: 1px;
+    transition: color 0.3s;
+    cursor: pointer;
+  }
+  .admin-trigger:hover { color: var(--gold); }
+</style>
+</head>
+<body>
+
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- LIGHTBOX -->
+<div class="lb" id="lb">
+  <span class="lb-close" onclick="closeLb()">×</span>
+  <img id="lbImg" src="" alt="Portfolio"/>
+</div>
+
+<!-- ADMIN OVERLAY -->
+<div id="adminOverlay">
+  <div id="adminPanel">
+    <!-- LOGIN SCREEN -->
+    <div id="adminLoginScreen">
+      <div id="adminLogin">
+        <h2>🔒 Admin Panel</h2>
+        <p>Enter your password to manage your website</p>
+        <input type="password" id="adminLoginInput" placeholder="••••••••••" onkeydown="if(event.key==='Enter')checkAdminLogin()"/>
+        <button id="adminLoginBtn" onclick="checkAdminLogin()">Login</button>
+        <div class="login-error" id="loginError">❌ Wrong password. Try again.</div>
+      </div>
+    </div>
+
+    <!-- ADMIN CONTENT (shown after login) -->
+    <div id="adminContent" style="display:none;">
+      <div class="admin-header">
+        <h2>⚙️ KESHSHOTS ADMIN</h2>
+        <button class="admin-close" onclick="closeAdmin()">×</button>
+      </div>
+
+      <!-- CONTACT INFO -->
+      <div class="admin-section">
+        <h3>📞 Contact Information</h3>
+        <div class="admin-grid">
+          <div class="admin-field">
+            <label>WhatsApp Number 1</label>
+            <input type="text" id="a-phone1" value="+256 786 674 508"/>
+          </div>
+          <div class="admin-field">
+            <label>WhatsApp Number 2</label>
+            <input type="text" id="a-phone2" value="+256 762 361 983"/>
+          </div>
+          <div class="admin-field">
+            <label>Email Address</label>
+            <input type="text" id="a-email" value="jkeshshots@gmail.com"/>
+          </div>
+          <div class="admin-field">
+            <label>Instagram Handle</label>
+            <input type="text" id="a-instagram" value="@KeshShots"/>
+          </div>
+          <div class="admin-field">
+            <label>Location</label>
+            <input type="text" id="a-location" value="Busia, Uganda"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- PRICING -->
+      <div class="admin-section">
+        <h3>💰 Flyer Prices (UGX)</h3>
+        <div class="admin-grid">
+          <div class="admin-field">
+            <label>Business Flyer</label>
+            <input type="text" id="a-p-business" value="25,000"/>
+          </div>
+          <div class="admin-field">
+            <label>Sale Flyer</label>
+            <input type="text" id="a-p-sale" value="25,000"/>
+          </div>
+          <div class="admin-field">
+            <label>Pricelist Flyer</label>
+            <input type="text" id="a-p-pricelist" value="25,000"/>
+          </div>
+          <div class="admin-field">
+            <label>Events Flyer</label>
+            <input type="text" id="a-p-events" value="35,000"/>
+          </div>
+          <div class="admin-field">
+            <label>Birthday Flyer</label>
+            <input type="text" id="a-p-birthday" value="40,000"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT TEXT -->
+      <div class="admin-section">
+        <h3>👤 About Me Text</h3>
+        <div class="admin-field">
+          <label>Your Name</label>
+          <input type="text" id="a-name" value="Kerera Trevor"/>
+        </div>
+        <div class="admin-field" style="margin-top:12px;">
+          <label>Tagline / Alias</label>
+          <input type="text" id="a-alias" value='"Kesh Khash" — Graphic Designer & Photographer'/>
+        </div>
+        <div class="admin-field" style="margin-top:12px;">
+          <label>About Paragraph 1</label>
+          <textarea id="a-about1">I'm a passionate graphic designer dedicated to creating visually compelling and meaningful designs. I specialize in branding, poster design, and digital content that helps businesses and individuals communicate their ideas effectively.</textarea>
+        </div>
+      </div>
+
+      <!-- NOTIFICATION SETTINGS -->
+      <div class="admin-section">
+        <h3>🔔 Order Notification Settings</h3>
+        <div class="admin-grid">
+          <div class="admin-field">
+            <label>Formspree Form ID (for Email)</label>
+            <input type="text" id="a-formspree" placeholder="e.g. xpzvwqab" value="YOUR_FORMSPREE_ID"/>
+          </div>
+          <div class="admin-field">
+            <label>WhatsApp Notification Number</label>
+            <input type="text" id="a-wa-notify" value="256786674508"/>
+          </div>
+        </div>
+        <p style="font-size:12px;color:var(--text-light);margin-top:12px;">
+          ℹ️ Get your Formspree ID free at <strong style="color:var(--gold);">formspree.io</strong> → Sign up → New Form → Copy the ID from the URL
+        </p>
+      </div>
+
+      <button class="admin-save-btn" onclick="saveAdminChanges()">💾 Save All Changes</button>
+      <div class="admin-saved-toast" id="adminToast">✅ Changes saved! Reload the page to see updates.</div>
+    </div>
+  </div>
+</div>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <span class="mobile-close" onclick="toggleMenu()">×</span>
+  <a href="#home" onclick="toggleMenu()">Home</a>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#portfolio" onclick="toggleMenu()">Portfolio</a>
+  <a href="#pricing" onclick="toggleMenu()">Pricing</a>
+  <a href="#contact" onclick="toggleMenu()">Contact</a>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#home" class="logo">KESH<em>SHOTS</em></a>
+  <ul class="nav-links">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#services">Services</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Hire Me</a>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-stripes"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Busia, Uganda · Creative Design Studio</p>
+    <h1 class="hero-title">KESH<br><em class="accent">SHOTS</em></h1>
+    <p class="hero-sub">Graphic Design &amp; Photography that speaks louder than words.<br>Brands built. Moments captured. Stories told.</p>
+    <div class="hero-btns">
+      <a href="#portfolio" class="btn-solid">View My Work</a>
+      <a href="#contact" class="btn-ghost">Let's Work Together</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <span>Scroll</span>
+    <div class="scroll-bar"></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-strip">
+  <div class="stat">
+    <div class="stat-n" data-target="200">0</div>
+    <div class="stat-l">Designs Delivered</div>
+  </div>
+  <div class="stat">
+    <div class="stat-n" data-target="50">0</div>
+    <div class="stat-l">Happy Clients</div>
+  </div>
+  <div class="stat">
+    <div class="stat-n" data-target="3">0</div>
+    <div class="stat-l">Years Experience</div>
+  </div>
+  <div class="stat">
+    <div class="stat-n" data-target="100">0</div>
+    <div class="stat-l">% Satisfaction</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="inner">
+    <div class="sec-label reveal">About Me</div>
+    <h2 class="sec-title reveal">Every design<br><em>tells a story.</em></h2>
+
+    <div class="about-grid">
+      <div class="about-photo-wrap reveal">
+        <div class="about-photo-frame">
+          <img src="1000767812.jpg" alt="Kerera Trevor — Kesh Shots" onerror="this.style.background='var(--forest-mid)';this.style.minHeight='520px'"/>
+        </div>
+        <div class="about-badge">
+          <div class="big">CEO</div>
+          <div class="sm">Kesh Shots</div>
+        </div>
+      </div>
+
+      <div class="about-text reveal">
+        <h3 class="about-name" id="site-name">Kerera Trevor</h3>
+        <p class="about-alias" id="site-alias">"Kesh Khash" — Graphic Designer &amp; Photographer</p>
+
+        <p id="site-about1">I'm a <strong>passionate graphic designer</strong> dedicated to creating visually compelling and meaningful designs. I specialize in branding, poster design, and digital content that helps businesses and individuals communicate their ideas effectively.</p>
+
+        <p>With a <strong>strong eye for detail and creativity</strong>, I focus on delivering designs that are not only visually appealing but also purposeful and impactful. I enjoy turning concepts into clean, modern visuals that connect with audiences and leave a lasting impression.</p>
+
+        <p>I'm always learning, exploring new trends, and pushing my creativity to the next level. Based in <strong>Busia, Uganda</strong> — serving clients across the region and beyond.</p>
+
+        <div class="skills-row">
+          <span class="stag">Flyer Design</span>
+          <span class="stag">Branding</span>
+          <span class="stag">Logo Design</span>
+          <span class="stag">Photography</span>
+          <span class="stag outline">Video Editing</span>
+          <span class="stag outline">Social Media Content</span>
+          <span class="stag outline">3D Mockups</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="inner">
+    <div class="sec-label reveal">What I Do</div>
+    <h2 class="sec-title reveal">My <em>Services</em></h2>
+
+    <div class="services-grid reveal">
+      <div class="svc">
+        <div class="svc-n">01</div>
+        <div class="svc-icon">🎨</div>
+        <div class="svc-name">Graphic Design</div>
+        <div class="svc-desc">Eye-catching flyers, posters, and digital content for businesses, events, and promotions. From birthday flyers to political campaigns — every design is built to grab attention.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-n">02</div>
+        <div class="svc-icon">🏷️</div>
+        <div class="svc-name">Logo &amp; Branding</div>
+        <div class="svc-desc">Complete brand identity packages including logo design, color palettes, typography guidelines, and stationery mockups that make your business look professional and memorable.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-n">03</div>
+        <div class="svc-icon">📸</div>
+        <div class="svc-name">Photography</div>
+        <div class="svc-desc">Professional event and portrait photography that captures real moments with clarity and emotion. Weddings, graduations, corporate events, and personal shoots.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-n">04</div>
+        <div class="svc-icon">📱</div>
+        <div class="svc-name">Social Media Graphics</div>
+        <div class="svc-desc">Scroll-stopping content designed for Instagram, Facebook, WhatsApp and TikTok. Consistent, branded visuals that grow your online presence.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-n">05</div>
+        <div class="svc-icon">🎬</div>
+        <div class="svc-name">Video Editing</div>
+        <div class="svc-desc">30-second and 1-minute ads, highlight reels, and promotional video edits. Delivered fast, formatted for all platforms.</div>
+      </div>
+      <div class="svc">
+        <div class="svc-n">06</div>
+        <div class="svc-icon">🧊</div>
+        <div class="svc-name">3D Mockups &amp; More</div>
+        <div class="svc-desc">Realistic product mockups, watermarks, and presentation-ready visuals to help your brand stand out in any medium — print or digital.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="inner">
+    <div class="sec-label reveal">My Work</div>
+    <h2 class="sec-title reveal"><em>Portfolio</em></h2>
+    <p style="color:var(--text-light);margin-top:8px;max-width:600px;" class="reveal">A collection of my best design work across marketing, birthday flyers, business graphics, and more.</p>
+
+    <div class="port-tabs reveal">
+      <div class="tab active" onclick="filterPort(this,'all')">All</div>
+      <div class="tab" onclick="filterPort(this,'marketing')">Marketing Flyers</div>
+      <div class="tab" onclick="filterPort(this,'birthday')">Birthday Flyers</div>
+      <div class="tab" onclick="filterPort(this,'business')">Business Flyers</div>
+      <div class="tab" onclick="filterPort(this,'other')">Other Designs</div>
+    </div>
+
+    <div class="port-grid reveal" id="portGrid">
+      <div class="port-item" data-cat="marketing" onclick="openLb(this)">
+        <img src="1000767901.jpg" alt="Marketing Flyers"/>
+        <div class="port-overlay">
+          <div class="port-cat">Marketing</div>
+          <div class="port-name">Sales &amp; Promotional Flyers</div>
+        </div>
+      </div>
+      <div class="port-item" data-cat="birthday" onclick="openLb(this)">
+        <img src="1000767924.jpg" alt="Birthday Flyer Designs"/>
+        <div class="port-overlay">
+          <div class="port-cat">Birthday</div>
+          <div class="port-name">Birthday Flyer Collection</div>
+        </div>
+      </div>
+      <div class="port-item" data-cat="business" onclick="openLb(this)">
+        <img src="1000767961.jpg" alt="Business Flyers"/>
+        <div class="port-overlay">
+          <div class="port-cat">Business</div>
+          <div class="port-name">Business Flyer Designs</div>
+        </div>
+      </div>
+      <div class="port-item" data-cat="other" onclick="openLb(this)">
+        <img src="1000767978.jpg" alt="Other Flyer Designs"/>
+        <div class="port-overlay">
+          <div class="port-cat">Political &amp; Campus</div>
+          <div class="port-name">Other Flyer Designs</div>
+        </div>
+      </div>
+      <div class="port-item" data-cat="business" onclick="openLb(this)">
+        <img src="1000768002.jpg" alt="Kesh Shots Price List Design"/>
+        <div class="port-overlay">
+          <div class="port-cat">Graphic Design</div>
+          <div class="port-name">Price List Design</div>
+        </div>
+      </div>
+      <div class="port-item" data-cat="business" onclick="openLb(this)">
+        <img src="1000733633.png" alt="Logo Packages Presentation"/>
+        <div class="port-overlay">
+          <div class="port-cat">Branding</div>
+          <div class="port-name">Logo Packages Design</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section id="pricing">
+  <div class="inner">
+    <div class="sec-label reveal">Investment</div>
+    <h2 class="sec-title reveal">Pricing &amp; <em>Packages</em></h2>
+
+    <div class="port-tabs reveal" style="margin-top:32px;">
+      <div class="tab active" onclick="showPricing(this,'flyers')">Flyers</div>
+      <div class="tab" onclick="showPricing(this,'logo')">Logo &amp; Branding</div>
+      <div class="tab" onclick="showPricing(this,'video')">Video Editing</div>
+      <div class="tab" onclick="showPricing(this,'others')">Others</div>
+    </div>
+
+    <!-- FLYERS -->
+    <div class="pricing-set active" id="p-flyers">
+      <div class="pricing-grid">
+        <div class="p-card">
+          <div class="p-type">Flyer</div>
+          <div class="p-name">Business Flyer</div>
+          <div class="p-amt" id="price-business">25,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider"></div>
+          <ul class="p-feat">
+            <li>Custom branded design</li>
+            <li>High-resolution file</li>
+            <li>Print &amp; digital ready</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('Business Flyer')">Order Now</a>
+        </div>
+        <div class="p-card">
+          <div class="p-type">Flyer</div>
+          <div class="p-name">Sale Flyer</div>
+          <div class="p-amt" id="price-sale">25,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider"></div>
+          <ul class="p-feat">
+            <li>Bold promotional layout</li>
+            <li>Product showcase</li>
+            <li>Print &amp; digital ready</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('Sale Flyer')">Order Now</a>
+        </div>
+        <div class="p-card">
+          <div class="p-type">Flyer</div>
+          <div class="p-name">Pricelist Flyer</div>
+          <div class="p-amt" id="price-pricelist">25,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider"></div>
+          <ul class="p-feat">
+            <li>Clean, professional layout</li>
+            <li>All items listed clearly</li>
+            <li>Print &amp; digital ready</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('Pricelist Flyer')">Order Now</a>
+        </div>
+        <div class="p-card">
+          <div class="p-type">Flyer</div>
+          <div class="p-name">Events Flyer</div>
+          <div class="p-amt" id="price-events">35,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider"></div>
+          <ul class="p-feat">
+            <li>Eye-catching event design</li>
+            <li>Date, time &amp; venue details</li>
+            <li>Print &amp; digital ready</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('Events Flyer')">Order Now</a>
+        </div>
+        <div class="p-card featured">
+          <div class="p-badge">Popular</div>
+          <div class="p-type">Flyer</div>
+          <div class="p-name">Birthday Flyer</div>
+          <div class="p-amt" id="price-birthday">40,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider" style="background:rgba(13,59,30,0.15)"></div>
+          <ul class="p-feat">
+            <li>Personalized celebration design</li>
+            <li>Photo integration</li>
+            <li>Unique theme per client</li>
+            <li>Print &amp; digital ready</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('Birthday Flyer')">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGO -->
+    <div class="pricing-set" id="p-logo">
+      <div class="logo-pkg-grid">
+        <div class="logo-pkg">
+          <div class="p-type" style="color:var(--gold)">Package 1</div>
+          <div class="lpkg-name">Logo Only</div>
+          <div class="lpkg-price">250,000 UGX</div>
+          <div class="lpkg-delivery">⏱ Delivery: 3 Days</div>
+          <div class="lpkg-includes">Includes:</div>
+          <ul class="lpkg-list">
+            <li>2 unique logo concepts to choose from</li>
+            <li>Finalized logo design</li>
+            <li>High-res files (PNG, JPEG, PDF)</li>
+            <li>Vector source file (AI/EPS/SVG)</li>
+            <li>Basic color palette suggestions</li>
+          </ul>
+          <a href="#contact" class="p-btn" style="margin-top:20px;display:block;" onclick="prefillService('Logo Only – 250,000 UGX')">Get Started</a>
+        </div>
+        <div class="logo-pkg">
+          <div class="p-type" style="color:var(--gold)">Package 2</div>
+          <div class="lpkg-name">Minor Guideline</div>
+          <div class="lpkg-price">650,000 UGX</div>
+          <div class="lpkg-delivery">⏱ Delivery: 1 Week</div>
+          <div class="lpkg-includes">Includes:</div>
+          <ul class="lpkg-list">
+            <li>3 unique logo concepts</li>
+            <li>Finalized logo design</li>
+            <li>Mini brand guideline document</li>
+            <li>Logo usage rules</li>
+            <li>Primary color palette</li>
+            <li>Typography recommendations</li>
+            <li>1–2 stationery/social mockups</li>
+            <li>2 rounds of revisions</li>
+          </ul>
+          <a href="#contact" class="p-btn" style="margin-top:20px;display:block;" onclick="prefillService('Minor Guideline – 650,000 UGX')">Get Started</a>
+        </div>
+        <div class="logo-pkg" style="border-color:rgba(201,168,76,0.4)">
+          <div class="p-type" style="color:var(--gold)">Package 3 ⭐</div>
+          <div class="lpkg-name">Full Visual Identity</div>
+          <div class="lpkg-price">1,850,000 UGX</div>
+          <div class="lpkg-delivery">⏱ Delivery: 2 Weeks</div>
+          <div class="lpkg-includes">Includes:</div>
+          <ul class="lpkg-list">
+            <li>4 unique logo concepts with refinement</li>
+            <li>Brand color palette</li>
+            <li>Typography guidelines</li>
+            <li>Stationery mockups (card, letterhead, email)</li>
+            <li>Social media profile assets</li>
+            <li>3 rounds of revisions</li>
+            <li>Customized logo animation (motion intro)</li>
+          </ul>
+          <div class="lpkg-discount">💡 Provide a sketch/concept → get 20% off</div>
+          <a href="#contact" class="p-btn" style="margin-top:16px;display:block;" onclick="prefillService('Full Visual Identity – 1,850,000 UGX')">Get Started</a>
+        </div>
+        <div class="logo-pkg">
+          <div class="p-type" style="color:var(--gold)">Package 4</div>
+          <div class="lpkg-name">Premium Brand Suite</div>
+          <div class="lpkg-price">5,000,000 UGX</div>
+          <div class="lpkg-delivery">⏱ Delivery: 3–4 Weeks</div>
+          <div class="lpkg-includes">Includes:</div>
+          <ul class="lpkg-list">
+            <li>6 unique logo concepts + unlimited refinement</li>
+            <li>Full brand guideline (colors, fonts, usage rules)</li>
+            <li>Extended stationery + social media kit</li>
+            <li>Advanced motion intro/logo animation</li>
+            <li>Unlimited changes &amp; revisions</li>
+            <li>Exported guideline document</li>
+            <li>Priority treatment &amp; premium support</li>
+          </ul>
+          <a href="#contact" class="p-btn" style="margin-top:20px;display:block;" onclick="prefillService('Premium Brand Suite – 5,000,000 UGX')">Get Started</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIDEO -->
+    <div class="pricing-set" id="p-video">
+      <div class="pricing-grid" style="max-width:600px">
+        <div class="p-card">
+          <div class="p-type">Video Editing</div>
+          <div class="p-name">30-Second Ad</div>
+          <div class="p-amt">30,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider"></div>
+          <ul class="p-feat">
+            <li>Up to 30 seconds</li>
+            <li>Transitions &amp; effects</li>
+            <li>Music &amp; text overlays</li>
+            <li>Social media ready</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('30-Second Video Ad')">Order Now</a>
+        </div>
+        <div class="p-card featured">
+          <div class="p-type">Video Editing</div>
+          <div class="p-name">1-Minute Ad</div>
+          <div class="p-amt">50,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider" style="background:rgba(13,59,30,0.15)"></div>
+          <ul class="p-feat">
+            <li>Up to 60 seconds</li>
+            <li>Professional transitions</li>
+            <li>Music, voiceover &amp; text</li>
+            <li>All platforms optimized</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('1-Minute Video Ad')">Order Now</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- OTHERS -->
+    <div class="pricing-set" id="p-others">
+      <div class="pricing-grid" style="max-width:600px">
+        <div class="p-card">
+          <div class="p-type">Extra</div>
+          <div class="p-name">Watermark</div>
+          <div class="p-amt">20,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider"></div>
+          <ul class="p-feat">
+            <li>Custom watermark design</li>
+            <li>Transparent PNG format</li>
+            <li>Multiple size exports</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('Watermark Design')">Order Now</a>
+        </div>
+        <div class="p-card featured">
+          <div class="p-type">Extra</div>
+          <div class="p-name">3D Mockup</div>
+          <div class="p-amt">50,000</div>
+          <div class="p-sub">UGX</div>
+          <div class="p-divider" style="background:rgba(13,59,30,0.15)"></div>
+          <ul class="p-feat">
+            <li>Realistic product 3D preview</li>
+            <li>Print-ready quality</li>
+            <li>Perfect for marketing</li>
+          </ul>
+          <a href="#contact" class="p-btn" onclick="prefillService('3D Mockup')">Order Now</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="inner">
+    <div class="sec-label reveal">Get In Touch</div>
+    <h2 class="sec-title reveal">Let's create<br><em>something great.</em></h2>
+
+    <div class="contact-layout">
+      <div class="contact-info reveal">
+        <h3>Reach Me</h3>
+        <p class="contact-quote">"Every design tells a story — I just help it speak louder."</p>
+
+        <a href="mailto:jkeshshots@gmail.com" class="c-card">
+          <span class="c-icon">✉️</span>
+          <div>
+            <div class="c-lbl">Email</div>
+            <div class="c-val" id="display-email">jkeshshots@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://wa.me/256786674508" class="c-card" target="_blank" id="wa-link-1">
+          <span class="c-icon">📱</span>
+          <div>
+            <div class="c-lbl">WhatsApp / Call</div>
+            <div class="c-val" id="display-phone1">+256 786 674 508</div>
+            <div class="c-sub">Available on WhatsApp</div>
+          </div>
+        </a>
+        <a href="https://wa.me/256762361983" class="c-card" target="_blank" id="wa-link-2">
+          <span class="c-icon">📲</span>
+          <div>
+            <div class="c-lbl">WhatsApp / Call</div>
+            <div class="c-val" id="display-phone2">+256 762 361 983</div>
+            <div class="c-sub">Available on WhatsApp</div>
+          </div>
+        </a>
+        <a href="https://instagram.com/KeshShots" class="c-card" target="_blank">
+          <span class="c-icon">📸</span>
+          <div>
+            <div class="c-lbl">Instagram</div>
+            <div class="c-val" id="display-instagram">@KeshShots</div>
+          </div>
+        </a>
+        <div class="c-card" style="cursor:default;">
+          <span class="c-icon">📍</span>
+          <div>
+            <div class="c-lbl">Location</div>
+            <div class="c-val" id="display-location">Busia, Uganda</div>
+            <div class="c-sub">Available for remote work nationwide</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ORDER FORM — sends to Formspree (email) + WhatsApp -->
+      <div class="contact-form reveal">
+        <!-- Hidden Formspree form (submits in background) -->
+        <div class="form-row">
+          <div class="fg">
+            <label>Your Name *</label>
+            <input type="text" id="f-name" placeholder="Full name" required/>
+          </div>
+          <div class="fg">
+            <label>Phone / WhatsApp *</label>
+            <input type="text" id="f-phone" placeholder="+256 ..." required/>
+          </div>
+        </div>
+        <div class="fg">
+          <label>Service Needed *</label>
+          <select id="f-service" required>
+            <option value="">Select service...</option>
+            <option>Flyer Design</option>
+            <option>Logo Design</option>
+            <option>Brand Identity</option>
+            <option>Photography</option>
+            <option>Video Editing</option>
+            <option>3D Mockup</option>
+            <option>Social Media Graphics</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>Your Email (optional)</label>
+          <input type="email" id="f-email" placeholder="email@example.com"/>
+        </div>
+        <div class="fg">
+          <label>Message</label>
+          <textarea id="f-message" placeholder="Tell me about your project, deadline, budget, or any special requirements..."></textarea>
+        </div>
+        <button class="form-submit" id="submitBtn" onclick="handleSubmit(event)">
+          Send Message &amp; Order
+        </button>
+
+        <!-- Success message -->
+        <div class="form-success" id="formSuccess">
+          <h4>✅ Order Received!</h4>
+          <p>Thank you! Your order has been sent to Kesh Shots.<br/>
+          You will be contacted on WhatsApp or Email shortly.<br/><br/>
+          <strong style="color:var(--gold);">You can also reach us directly:</strong><br/>
+          WhatsApp: +256 786 674 508</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="footer-brand">KESH<em>SHOTS</em></div>
+    <div class="footer-tagline">"Every design tells a story."</div>
+  </div>
+  <div class="footer-copy">© 2026 Kesh Shots · Busia, Uganda</div>
+  <div class="footer-links">
+    <a href="mailto:jkeshshots@gmail.com">Email</a>
+    <a href="https://wa.me/256786674508" target="_blank">WhatsApp</a>
+    <a href="https://instagram.com/KeshShots" target="_blank">Instagram</a>
+    <span class="admin-trigger" onclick="openAdmin()" title="Admin">⚙</span>
+  </div>
+</footer>
+
+<script>
+  // =====================
+  // CONFIG — set your Formspree ID here (or via Admin panel)
+  // Get it free at formspree.io → sign up → new form → copy ID
+  // =====================
+  let FORMSPREE_ID = localStorage.getItem('ks_formspree') || 'YOUR_FORMSPREE_ID';
+  let WA_NUMBER = localStorage.getItem('ks_wa_notify') || '256786674508';
+
+  // =====================
+  // LOAD SAVED ADMIN DATA
+  // =====================
+  function loadSavedData() {
+    const map = {
+      'ks_phone1': 'display-phone1',
+      'ks_phone2': 'display-phone2',
+      'ks_email':  'display-email',
+      'ks_instagram': 'display-instagram',
+      'ks_location': 'display-location',
+      'ks_name': 'site-name',
+      'ks_alias': 'site-alias',
+      'ks_about1': 'site-about1',
+    };
+    for (const [key, id] of Object.entries(map)) {
+      const val = localStorage.getItem(key);
+      if (val && document.getElementById(id)) {
+        document.getElementById(id).textContent = val;
+      }
+    }
+    // Prices
+    const prices = {
+      'ks_p_business': 'price-business',
+      'ks_p_sale': 'price-sale',
+      'ks_p_pricelist': 'price-pricelist',
+      'ks_p_events': 'price-events',
+      'ks_p_birthday': 'price-birthday',
+    };
+    for (const [key, id] of Object.entries(prices)) {
+      const val = localStorage.getItem(key);
+      if (val && document.getElementById(id)) {
+        document.getElementById(id).textContent = val;
+      }
+    }
+    // WhatsApp links
+    const p1 = localStorage.getItem('ks_phone1');
+    if (p1) {
+      const num1 = p1.replace(/\D/g,'');
+      const wa1 = document.getElementById('wa-link-1');
+      if (wa1) wa1.href = 'https://wa.me/' + num1;
+    }
+    const p2 = localStorage.getItem('ks_phone2');
+    if (p2) {
+      const num2 = p2.replace(/\D/g,'');
+      const wa2 = document.getElementById('wa-link-2');
+      if (wa2) wa2.href = 'https://wa.me/' + num2;
+    }
+    FORMSPREE_ID = localStorage.getItem('ks_formspree') || FORMSPREE_ID;
+    WA_NUMBER = localStorage.getItem('ks_wa_notify') || WA_NUMBER;
+  }
+  loadSavedData();
+
+  // =====================
+  // CURSOR
+  // =====================
+  const cur = document.getElementById('cursor');
+  const ring = document.getElementById('cursorRing');
+  document.addEventListener('mousemove', e => {
+    cur.style.left = e.clientX - 5 + 'px';
+    cur.style.top = e.clientY - 5 + 'px';
+    ring.style.left = e.clientX - 16 + 'px';
+    ring.style.top = e.clientY - 16 + 'px';
+  });
+  document.querySelectorAll('a,button,.tab,.port-item').forEach(el => {
+    el.addEventListener('mouseenter', () => cur.style.transform = 'scale(2.5)');
+    el.addEventListener('mouseleave', () => cur.style.transform = 'scale(1)');
+  });
+
+  // =====================
+  // NAV SCROLL
+  // =====================
+  window.addEventListener('scroll', () => {
+    document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // =====================
+  // REVEAL
+  // =====================
+  const revEls = document.querySelectorAll('.reveal');
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) setTimeout(() => e.target.classList.add('in'), i * 80);
+    });
+  }, { threshold: 0.1 });
+  revEls.forEach(el => obs.observe(el));
+
+  // =====================
+  // COUNTER
+  // =====================
+  const counters = document.querySelectorAll('[data-target]');
+  const cObs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const t = parseInt(e.target.dataset.target);
+        let c = 0; const step = t / 60;
+        const timer = setInterval(() => {
+          c = Math.min(c + step, t);
+          e.target.textContent = Math.floor(c) + '+';
+          if (c >= t) clearInterval(timer);
+        }, 22);
+        cObs.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.5 });
+  counters.forEach(el => cObs.observe(el));
+
+  // =====================
+  // MOBILE MENU
+  // =====================
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+
+  // =====================
+  // PORTFOLIO FILTER
+  // =====================
+  function filterPort(el, cat) {
+    document.querySelectorAll('.port-tabs .tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.port-item').forEach(item => {
+      item.style.display = (cat === 'all' || item.dataset.cat === cat) ? '' : 'none';
+    });
+  }
+
+  // =====================
+  // PRICING TABS
+  // =====================
+  function showPricing(el, id) {
+    document.querySelectorAll('#pricing .tab').forEach(t => t.classList.remove('active'));
+    el.classList.add('active');
+    document.querySelectorAll('.pricing-set').forEach(s => s.classList.remove('active'));
+    document.getElementById('p-' + id).classList.add('active');
+  }
+
+  // =====================
+  // LIGHTBOX
+  // =====================
+  function openLb(el) {
+    const img = el.querySelector('img');
+    document.getElementById('lbImg').src = img.src;
+    document.getElementById('lb').classList.add('open');
+  }
+  function closeLb() {
+    document.getElementById('lb').classList.remove('open');
+  }
+  document.getElementById('lb').addEventListener('click', function(e) {
+    if (e.target === this) closeLb();
+  });
+
+  // =====================
+  // PREFILL SERVICE FROM PRICING
+  // =====================
+  function prefillService(serviceName) {
+    setTimeout(() => {
+      const sel = document.getElementById('f-service');
+      if (!sel) return;
+      for (let i = 0; i < sel.options.length; i++) {
+        if (sel.options[i].text.toLowerCase().includes(serviceName.split(' ')[0].toLowerCase())) {
+          sel.selectedIndex = i;
+          break;
+        }
+      }
+    }, 400);
+  }
+
+  // =====================
+  // FORM SUBMIT — Email via Formspree + WhatsApp notification
+  // =====================
+  async function handleSubmit(e) {
+    e.preventDefault();
+    const name    = document.getElementById('f-name').value.trim();
+    const phone   = document.getElementById('f-phone').value.trim();
+    const service = document.getElementById('f-service').value;
+    const email   = document.getElementById('f-email').value.trim();
+    const message = document.getElementById('f-message').value.trim();
+
+    if (!name || !phone || !service) {
+      alert('Please fill in your name, phone number, and the service you need.');
+      return;
+    }
+
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    // Build WhatsApp message
+    const waMsg = encodeURIComponent(
+      `🆕 NEW ORDER from KeshShots Website!\n\n` +
+      `👤 Name: ${name}\n` +
+      `📱 Phone: ${phone}\n` +
+      `🎨 Service: ${service}\n` +
+      `📧 Email: ${email || 'Not provided'}\n` +
+      `💬 Message: ${message || 'No message'}\n\n` +
+      `— Sent via keshshots.com`
+    );
+    const waURL = `https://wa.me/${WA_NUMBER}?text=${waMsg}`;
+
+    // Try to send via Formspree (email notification)
+    let emailSent = false;
+    if (FORMSPREE_ID && FORMSPREE_ID !== 'YOUR_FORMSPREE_ID') {
+      try {
+        const resp = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+          body: JSON.stringify({
+            name, phone, service, email, message,
+            _subject: `🆕 New Order: ${service} — ${name}`
+          })
+        });
+        if (resp.ok) emailSent = true;
+      } catch(err) {
+        console.log('Formspree error:', err);
+      }
+    }
+
+    // Show success message
+    document.getElementById('formSuccess').classList.add('show');
+    btn.textContent = '✓ Order Sent!';
+
+    // Open WhatsApp automatically so you get notified
+    window.open(waURL, '_blank');
+
+    // Clear form
+    document.getElementById('f-name').value = '';
+    document.getElementById('f-phone').value = '';
+    document.getElementById('f-service').selectedIndex = 0;
+    document.getElementById('f-email').value = '';
+    document.getElementById('f-message').value = '';
+  }
+
+  // =====================
+  // ADMIN PANEL
+  // =====================
+  const ADMIN_PASS = 'kesh@admin';
+
+  function openAdmin() {
+    document.getElementById('adminOverlay').classList.add('open');
+    document.getElementById('adminLoginScreen').style.display = 'block';
+    document.getElementById('adminContent').style.display = 'none';
+    document.getElementById('adminLoginInput').value = '';
+    document.getElementById('loginError').classList.remove('show');
+    loadAdminFields();
+  }
+
+  function closeAdmin() {
+    document.getElementById('adminOverlay').classList.remove('open');
+  }
+
+  document.getElementById('adminOverlay').addEventListener('click', function(e) {
+    if (e.target === this) closeAdmin();
+  });
+
+  function checkAdminLogin() {
+    const pw = document.getElementById('adminLoginInput').value;
+    if (pw === ADMIN_PASS) {
+      document.getElementById('adminLoginScreen').style.display = 'none';
+      document.getElementById('adminContent').style.display = 'block';
+    } else {
+      document.getElementById('loginError').classList.add('show');
+      document.getElementById('adminLoginInput').value = '';
+    }
+  }
+
+  function loadAdminFields() {
+    const fields = {
+      'a-phone1':    localStorage.getItem('ks_phone1') || '+256 786 674 508',
+      'a-phone2':    localStorage.getItem('ks_phone2') || '+256 762 361 983',
+      'a-email':     localStorage.getItem('ks_email') || 'jkeshshots@gmail.com',
+      'a-instagram': localStorage.getItem('ks_instagram') || '@KeshShots',
+      'a-location':  localStorage.getItem('ks_location') || 'Busia, Uganda',
+      'a-name':      localStorage.getItem('ks_name') || 'Kerera Trevor',
+      'a-alias':     localStorage.getItem('ks_alias') || '"Kesh Khash" — Graphic Designer & Photographer',
+      'a-about1':    localStorage.getItem('ks_about1') || '',
+      'a-p-business':  localStorage.getItem('ks_p_business') || '25,000',
+      'a-p-sale':      localStorage.getItem('ks_p_sale') || '25,000',
+      'a-p-pricelist': localStorage.getItem('ks_p_pricelist') || '25,000',
+      'a-p-events':    localStorage.getItem('ks_p_events') || '35,000',
+      'a-p-birthday':  localStorage.getItem('ks_p_birthday') || '40,000',
+      'a-formspree':   localStorage.getItem('ks_formspree') || '',
+      'a-wa-notify':   localStorage.getItem('ks_wa_notify') || '256786674508',
+    };
+    for (const [id, val] of Object.entries(fields)) {
+      const el = document.getElementById(id);
+      if (el && val) el.value = val;
+    }
+  }
+
+  function saveAdminChanges() {
+    const saves = {
+      'ks_phone1':     'a-phone1',
+      'ks_phone2':     'a-phone2',
+      'ks_email':      'a-email',
+      'ks_instagram':  'a-instagram',
+      'ks_location':   'a-location',
+      'ks_name':       'a-name',
+      'ks_alias':      'a-alias',
+      'ks_about1':     'a-about1',
+      'ks_p_business': 'a-p-business',
+      'ks_p_sale':     'a-p-sale',
+      'ks_p_pricelist':'a-p-pricelist',
+      'ks_p_events':   'a-p-events',
+      'ks_p_birthday': 'a-p-birthday',
+      'ks_formspree':  'a-formspree',
+      'ks_wa_notify':  'a-wa-notify',
+    };
+    for (const [key, id] of Object.entries(saves)) {
+      const el = document.getElementById(id);
+      if (el) localStorage.setItem(key, el.value);
+    }
+    // Reload live data
+    loadSavedData();
+    FORMSPREE_ID = localStorage.getItem('ks_formspree') || FORMSPREE_ID;
+    WA_NUMBER = localStorage.getItem('ks_wa_notify') || WA_NUMBER;
+
+    // Show toast
+    const toast = document.getElementById('adminToast');
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 4000);
+  }
+</script>
+</body>
+</html>
